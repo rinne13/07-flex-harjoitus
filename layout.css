@@ -1,0 +1,169 @@
+body {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	background-color: darkcyan;
+	padding: 10px;
+	color: rgb(0, 0, 0);
+}
+
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.wrapper * {
+	padding: 14px 1.2px 10px 7.2px;
+	flex-grow: 1;
+	flex-basis: 100%;
+}
+
+.header {
+	background-color: gold;
+	text-align: left;
+}
+
+.buttons {
+	display: flex;
+
+	justify-content: center;
+	text-align: center;
+	background-color: gainsboro;
+	margin: 0px 1px;
+	font-size: 1.2rem;
+	padding: 0px 0px;
+}
+
+.buttons li {
+	border: 0.1px solid black;
+	justify-content: start;
+}
+
+
+.main {
+	background-color: rgb(216, 141, 50);
+    border:  0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+.text {
+	padding: 0px 10px;
+}
+
+.fa {
+	display: flex;
+	flex-basis: 100%;
+	flex-wrap: wrap;
+	opacity: 1;
+	font-size: 15px;
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	margin: 0px 0px 0px 0px;
+	max-width: 100%;
+}
+
+/* Facebook */
+.fa-facebook {
+	background: #3B5998;
+	color: white;
+
+}
+
+.socials-div {
+    display: flex;
+    border:  0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+/* Twitter */
+.fa-twitter {
+	background: #55ACEE;
+	color: white;
+}
+
+/*E-mail*/
+.fa-envelope {
+	background: gray;
+	color: white;
+}
+
+
+.aside-1 {
+	background-color: mediumspringgreen;
+	padding: 14px 1.2px 10px 7.2px;
+}
+
+.aside-2 {
+	background-color: seagreen;
+	padding: 14px 1.2px 10px 7.2px;
+}
+
+.footer {
+	background-color: lightgreen;
+}
+
+
+@media only screen and (min-width: 426px) and (max-width: 769px) {
+	.wrapper {
+		flex-direction: row;
+	}
+
+	.aside-1 {
+		flex-basis: auto;
+		order: 1;
+	}
+
+	.aside-2 {
+		flex-basis: auto;
+		order: 1;
+	}
+
+	.socials-div {
+		flex-basis: auto;
+		width: 100%;	
+	} 
+
+	.main {
+		flex-basis: auto;
+		padding: 0px;
+		width: 100%;
+	}
+
+	.footer {
+		order: 2;
+	}
+
+}
+
+
+@media only screen and (min-width: 769px) {
+	.aside-1 {
+		order: 1;
+		flex-basis: 0px;
+	}
+
+	.main {
+		order: 2;
+		flex-basis: auto;
+		width: 100%;
+	}
+
+    .fa {
+        order: 2;
+        flex-basis: 400px;
+		width: 100%;
+    }
+
+	.aside-2 {
+		order: 3;
+		flex-basis: 0px;
+	}
+
+	.footer {
+		order: 4;
+	}
+
+}
